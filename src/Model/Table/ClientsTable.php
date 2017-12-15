@@ -37,6 +37,11 @@ class ClientsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        
+        $this->hasMany('Pets')
+            ->setForeignKey('id_client')
+            ->setDependent(true);
+        
     }
 
     /**

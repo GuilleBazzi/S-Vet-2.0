@@ -37,6 +37,9 @@ class SpeciesTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        
+        $this->hasMany('Pets')
+            ->setForeignKey('id_species');        
     }
 
     /**

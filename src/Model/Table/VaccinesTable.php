@@ -41,8 +41,8 @@ class VaccinesTable extends Table
         $this->addBehavior('Timestamp');
 
         $this->belongsToMany('Pets', [
-            'foreignKey' => 'vaccine_id',
-            'targetForeignKey' => 'pet_id',
+            'foreignKey' => 'id_vaccine',
+            'targetForeignKey' => 'id_pet',
             'joinTable' => 'pets_vaccines'
         ]);
     }

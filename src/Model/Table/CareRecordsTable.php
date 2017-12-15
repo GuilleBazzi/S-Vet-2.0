@@ -37,6 +37,8 @@ class CareRecordsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        
+        $this->hasOne('Pets');        
     }
 
     /**

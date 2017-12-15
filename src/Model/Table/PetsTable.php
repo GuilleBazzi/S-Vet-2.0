@@ -44,10 +44,12 @@ class PetsTable extends Table
             ->setForeignKey('id_client');        
         
         $this->belongsToMany('Vaccines', [
-            'foreignKey' => 'pet_id',
-            'targetForeignKey' => 'vaccine_id',
+            'foreignKey' => 'id_pet',
+            'targetForeignKey' => 'id_vaccine',
             'joinTable' => 'pets_vaccines'
         ]);
+        
+        $this->hasOne('CareRecords');
     }
 
     /**
